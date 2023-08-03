@@ -17,7 +17,7 @@ void enter()
 
     if (ch > 20)
     {
-        cout << "exceeds the array limit"<<endl;
+        cout << "exceeds the array limit" << endl;
     }
 
     else if (total == 0)
@@ -59,7 +59,7 @@ void enter()
     {
         if (ch + total > 20)
         {
-            cout << "exceed the array limit "<<endl;
+            cout << "exceed the array limit " << endl;
         }
         else
         {
@@ -103,13 +103,11 @@ void show()
     if (total == 0)
 
     {
-
         cout << "No data is entered" << endl;
     }
 
     else
     {
-
         for (int i = 0; i < total; i++)
 
         {
@@ -137,13 +135,11 @@ void search()
     if (total == 0)
 
     {
-
         cout << "No data is entered" << endl;
     }
 
     else
     {
-
         string rollno;
 
         cout << "Enter the roll no of student" << endl;
@@ -179,25 +175,21 @@ void update()
     if (total == 0)
 
     {
-
         cout << "No data is entered" << endl;
     }
 
     else
     {
-
         string rollno;
 
         cout << "Enter the roll no of student which you want to update" << endl;
 
         cin >> rollno;
 
-        for (int i = 0; i < total; i++)
-
+        int i = 0 ; 
+        for (i = 0; i < total; i++)
         {
-
             if (rollno == arr2[i])
-
             {
 
                 cout << "\nPrevious data" << endl
@@ -214,30 +206,10 @@ void update()
                 cout << "Class " << arr4[i] << endl;
 
                 cout << "Contact " << arr5[i] << endl;
-
-                cout << "\nEnter new data" << endl
-                     << endl;
-
-                cout << "Enter name ";
-
-                cin >> arr1[i];
-
-                cout << "Enter Roll no ";
-
-                cin >> arr2[i];
-
-                cout << "Enter course ";
-
-                cin >> arr3[i];
-
-                cout << "Enter class ";
-
-                cin >> arr4[i];
-
-                cout << "Enter contact ";
-
-                cin >> arr5[i];
             }
+        }
+        if(i==total){
+            cout<<"Roll no is not exist";
         }
     }
 }
