@@ -145,13 +145,10 @@ void search()
         cout << "Enter the roll no of student" << endl;
 
         cin >> rollno;
-
-        for (int i = 0; i < total; i++)
-
+        int i ; 
+        for (i = 0; i < total; i++)
         {
-
             if (rollno == arr2[i])
-
             {
 
                 cout << "Name " << arr1[i] << endl;
@@ -163,13 +160,16 @@ void search()
                 cout << "Class " << arr4[i] << endl;
 
                 cout << "Contact " << arr5[i] << endl;
+                break;
             }
+        }
+        if(i==total){
+            cout<<"roll no not exist"<<endl;
         }
     }
 }
 
 void update()
-
 {
 
     if (total == 0)
@@ -206,10 +206,13 @@ void update()
                 cout << "Class " << arr4[i] << endl;
 
                 cout << "Contact " << arr5[i] << endl;
+
+                cout<<"what details you want to update "<<endl;
+                
             }
         }
         if(i==total){
-            cout<<"Roll no is not exist";
+            cout<<"Roll no is not exist"<<endl;
         }
     }
 }
@@ -319,7 +322,6 @@ main()
         cin >> value;
 
         switch (value)
-
         {
 
         case 1:
@@ -361,7 +363,6 @@ main()
         default:
 
             cout << "Invalid input" << endl;
-
             break;
         }
     }
