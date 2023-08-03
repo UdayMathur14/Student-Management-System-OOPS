@@ -1,4 +1,3 @@
-#include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -18,7 +17,6 @@ void enter()
     cin >> ch;
 
     if (total == 0)
-
     {
 
         total = ch + total;
