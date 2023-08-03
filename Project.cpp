@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 string arr1[20], arr2[20], arr3[20], arr4[20], arr5[20];
@@ -9,14 +9,18 @@ void enter()
 
 {
 
-    
     int ch = 0;
 
     cout << "How many students do u want to enter??" << endl;
 
     cin >> ch;
 
-    if (total == 0)
+    if (ch > 20)
+    {
+        cout << "exceeds the array limit"<<endl;
+    }
+
+    else if (total == 0)
     {
 
         total = ch + total;
@@ -53,36 +57,42 @@ void enter()
     else
 
     {
-
-        for (int i = total; i < ch + total; i++)
-
+        if (ch + total > 20)
         {
-
-            cout << "\nEnter the Data of student " << i + 1 << endl
-                 << endl;
-
-            cout << "Enter name ";
-
-            cin >> arr1[i];
-
-            cout << "Enter Roll no ";
-
-            cin >> arr2[i];
-
-            cout << "Enter course ";
-
-            cin >> arr3[i];
-
-            cout << "Enter class ";
-
-            cin >> arr4[i];
-
-            cout << "Enter contact ";
-
-            cin >> arr5[i];
+            cout << "exceed the array limit "<<endl;
         }
+        else
+        {
+            for (int i = total; i < ch + total; i++)
 
-        total = ch + total;
+            {
+
+                cout << "\nEnter the Data of student " << i + 1 << endl
+                     << endl;
+
+                cout << "Enter name ";
+
+                cin >> arr1[i];
+
+                cout << "Enter Roll no ";
+
+                cin >> arr2[i];
+
+                cout << "Enter course ";
+
+                cin >> arr3[i];
+
+                cout << "Enter class ";
+
+                cin >> arr4[i];
+
+                cout << "Enter contact ";
+
+                cin >> arr5[i];
+            }
+
+            total = ch + total;
+        }
     }
 }
 
